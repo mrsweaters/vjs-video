@@ -1,3 +1,4 @@
+'use strict';
 /**
  * @ngdoc directive
  * @name vjsVideoApp.directive:vjs.directive.js
@@ -238,7 +239,7 @@
                 var opts = params.vjsSetup || {},
                     ratio = params.vjsRatio,
                     isValidContainer =
-                        !isMediaElement(element) && !getVersion().match(/^5\./)
+                        !isMediaElement(element) && !getVersion().match(/^7\./)
                             ? true
                             : false,
                     mediaWatcher;
@@ -471,7 +472,7 @@
                             }
 
                             //check if video.js version 5.x is running
-                            if (getVersion().match(/^5\./)) {
+                            if (getVersion().match(/^7\./)) {
                                 if (ctrl.vjsRatio) {
                                     if (!ctrl.vjsSetup) {
                                         ctrl.vjsSetup = {};
